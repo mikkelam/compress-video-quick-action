@@ -61,7 +61,7 @@
 					<key>COMMAND_STRING</key>
 					<string>for f in "$@"
 do
-  /opt/homebrew/bin/ffmpeg -i "$f" -c:v libx264 -preset fast "${f%.*}_compressed.mp4"
+  /opt/homebrew/bin/ffmpeg -i "$f" -c:v libx264 -preset fast "${f%.*}_compressed.${f##*.}"
 done</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
